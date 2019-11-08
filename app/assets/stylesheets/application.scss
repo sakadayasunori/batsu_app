@@ -1,4 +1,14 @@
  @import "bootstrap";
  @import "home.scss";
 
+ @font-face{
+   font-family: "Snap_P_ver1";
+   src: font-url("assets/Snap_P_ver1.otf");
+ }
 body { padding-top: 70px; }
+
+.top-hero-container {
+    background: image-url("Fire.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
