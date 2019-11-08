@@ -36,15 +36,15 @@ class TasksController < ApplicationController
   File.binwrite("public/user_images/#{@task.image_name}", image.read)
   end
 
-  if @task.save
-    flash[:notice] = "タスク 「#{task.name}」を登録しました。"
-    redirect_to("#")
-  else
-    render("/tals/new")
-  end
-
-    # task.save!
-    # redirect_to tasks_url, notice: "タスク 「#{task.name}」を登録しました。"
+  # if @task.save
+  #   flash[:notice] = "タスク「#{@task.name}」を登録しました。"
+  #   redirect_to("#")
+  # else
+  #   render("/tals/new")
+  # end
+  #
+    @task.save!
+    redirect_to tasks_url, notice: "タスク 「#{@task.name}」を登録しました。"
   end
 
   private

@@ -1,37 +1,66 @@
 <body class="body">
   <main role="main">
     <div class="top">
-      <div class="top-message">
+      <div class="top-hero-wrapper text-center ">
         <h1>罰アプリ</h1>
         <p>罰を設定して目標を達成しよう！</p>
         <hr>
       </div>
-      <div class="top-new">
-        <h2>新着目標</h2>
-        <% @new_tasks.each do |task| %>
-          <div class="d-inline-block p-2 bg-primary text-white">
-            <h3><%= task.name %></h3>
-            <p><%= task.description %></p>
-            <figure class="figure">
-              <img src="assets/#{task.image_name}" class="figure-img img-fluid rounded" alt="一般的な角丸イメージ">
-            </figure>
-          </div>
 
-        <% end %>
-      <hr>
+<div class="row my-5 mx-auto d-block">
+  <div class="container">
+    <div class="top-new text-center">
+      <h2>新着目標</h2>
+      <div class="row">
+        <div class="card-deck">
+          <% @new_tasks.each do |task| %>
+          <div class="d-inline col-sm-3 col-md-3 my-3">
+            <div class="card img-thumbnail shadow border-success">
+              <img class="card-img-top" src="assets/#{task.image_name}" alt="画像">
+              <div class="card-body px-2 py-3">
+                <h5 class="card-title text-center"><%= task.name %></h5>
+                <p class="card-text"><%= task.description %></p>
+                <div class="card-footer">
+                  <small class="text-muted">最終更新3分前</small>
+                </div>
+              </div><!-- /.card-body -->
+            </div><!-- /.card -->
+          </div><!-- /.col-sm-6.col-md-3 -->
+          <% end %>
+        </div><!-- /.row -->
+        </div>
       </div>
-      <div class="top-favorite">
-        <h2>注目の目標</h2>
-        <% @update_tasks.each do |task| %>
-          <div class="d-inline-block p-2 bg-primary text-white">
-            <h3><%= task.name %></h3>
-            <p><%= task.description %></p>
-            <figure class="figure">
-              <img src="assets/#{task.image_name}" class="figure-img img-fluid rounded" alt="一般的な角丸イメージ">
-            </figure>
-          </div>
+    </div>
+    <hr>
+</div>
 
-        <% end %>
+<div class="row my-5 mx-auto d-block">
+  <div class="container">
+    <div class="top-new text-center">
+      <h2>新着目標</h2>
+      <div class="row">
+        <div class="card-deck">
+          <% @new_tasks.each do |task| %>
+          <div class="d-inline col-sm-3 col-md-3 my-3">
+            <div class="card img-thumbnail shadow border-success">
+              <img class="card-img-top" src="assets/#{task.image_name}" alt="画像">
+              <div class="card-body px-2 py-3">
+                <h5 class="card-title text-center"><%= task.name %></h5>
+                <p class="card-text"><%= task.description %></p>
+                <div class="card-footer">
+                  <small class="text-muted">最終更新3分前</small>
+                </div>
+              </div><!-- /.card-body -->
+            </div><!-- /.card -->
+          </div><!-- /.col-sm-6.col-md-3 -->
+          <% end %>
+        </div><!-- /.row -->
+        </div>
       </div>
+    </div>
+    <hr>
+</div>
+    </div>
+
   </main>
 </body>
