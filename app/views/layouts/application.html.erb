@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>罰アプリ（仮）</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">罰アプリ</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navber">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">罰アプリとは</a>
+            </li>
+
+          <% if current_user %>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_in">ログアウト</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tasks/new">新規投稿</a>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <a class="nav-link" href="/mypage">新規登録</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_in">ログイン</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tasks/new">新規投稿</a>
+            </li>
+          <% end %>
+
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <%= yield %>
+
+
+    <footer>
+      <div class="footer">
+        <a title="top" href="http://localhost:3000/">罰アプリ</a>
+        <a title="運営" href="http://localhost:3000/about">運営</a>
+        <a tilte="利用規約" href="http://localhost:3000/about">利用規約</a>
+      </div>
+    </footer>
+  </body>
+</head>
