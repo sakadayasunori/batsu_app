@@ -16,7 +16,7 @@
           <% @new_tasks.each do |task| %>
           <div class="d-inline col-sm-3 col-md-3 my-3">
             <div class="card img-thumbnail shadow border-success">
-              <img class="card-img-top" src="assets/tasks/1.jpeg" alt="画像">
+              <img class="card-img-top" src="<%= "assets/tasks/#{task.image_name}"%>" alt="画像">
               <div class="card-body px-2 py-3">
                 <h5 class="card-title text-center"><%= task.name %></h5>
                 <p class="card-text "><%= task.description %></p>
@@ -41,7 +41,7 @@
             <% @new_tasks.each do |task| %>
             <div class="d-inline col-sm-3 col-md-3 my-3">
               <div class="card img-thumbnail shadow border-success">
-                <img class="card-img-top" src="assets/tasks/1.jpeg" alt="画像">
+                <img class="card-img-top" src="<%= "assets/tasks/#{task.image_name}"%>" alt="画像">
                 <div class="card-body px-2 py-3">
                   <h5 class="card-title text-center"><%= task.name %></h5>
                   <p class="card-text "><%= task.description %></p>
