@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_11_08_115231) do
   create_table "tasks", force: :cascade do |t|
     t.string "name", limit: 30, null: false
     t.text "description"
-    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_name"

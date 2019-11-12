@@ -28,23 +28,24 @@ class TasksController < ApplicationController
   end
 
   def create
-  @task = Task.new(task_params)
+    task = Task.new(task_params)
+      #正常に機能しなかったためコメントアウト
+      #if params[:image]
+      #@task.image_name = "#{@task.id}.jpg"
+      #image = params[:image]
+      #File.binwrite("public/user_images/#{@task.image_name}", image.read)
+      #end
 
-  if params[:image]
-  @task.image_name = "#{@task.id}.jpg"
-  image = params[:image]
-  File.binwrite("public/user_images/#{@task.image_name}", image.read)
-  end
+      #if @task.save
+        #flash[:notice] = "タスク 「#{task.name}」を登録しました。"
+        #redirect_to("#")
+      #else
+        #render("/tals/new")
+      #end
 
-  if @task.save
-    flash[:notice] = "タスク 「#{task.name}」を登録しました。"
-    redirect_to("#")
-  else
-    render("/tals/new")
-  end
 
-    # task.save!
-    # redirect_to tasks_url, notice: "タスク 「#{task.name}」を登録しました。"
+    task.save!
+    redirect_to tasks_url, notice: "タスク 「#{task.name}」を登録しました。"
   end
 
   private
