@@ -1,0 +1,18 @@
+
+  <main class="container clearfix"">
+    
+    <%= render partial: "homes/sidevar" %>
+
+        <div class="content">
+          <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
+            <!-- ユーザーがログインしていた時の処理 -->
+            <h4> ユーザー名： <%= current_user.name %> </h4>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
+          <% else %>
+            <!-- ユーザーがログインしていなかった時の処理 -->
+            <h2> 現在ログインしていません </h2>
+            <%= link_to "ログイン", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
+            <%= link_to "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+          <% end %>
+        </div>
+  </main>

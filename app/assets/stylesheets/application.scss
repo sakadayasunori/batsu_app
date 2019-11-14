@@ -1,14 +1,158 @@
  @import "bootstrap";
- @import "home.scss";
+ @import "homes.scss";
 
  @font-face{
    font-family: "Snap_P_ver1";
    src: font-url("assets/Snap_P_ver1.otf");
  }
-body { padding-top: 70px; }
+body {
+  padding-top: 100px;
+  background-color: #F5F5F5;
+ }
 
 .top-hero-container {
     background: image-url("blue-Fire.jpg");
-    background-position: left center;
+    background-position: center;
     background-repeat: no-repeat;
+}
+
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+// user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.mypage-nav-list li:first-child {
+    border: 0;
+}
+.mypage-nav-list li {
+    border-top: 1px solid #eee;
+}
+
+//footer
+.footer{
+    width: 1020px;
+    background-color: #89c7de;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
+
+.global-footer {
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    font-weight: 500;
+    padding: 0 20px 10px 20px;
+    background: #212121;
+    color: #fff;
+}
+
+.global-footer nav {
+    width: 1020px;
+    argin: 0 auto;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+
+*, ::before, ::after {
+    /* -webkit-box-sizing: inherit; */
+    box-sizing: inherit;
+}
+
+.footer-cell:first-child {
+    padding: 0 20px 0 0;
+    width: 20%;
+}
+
+.footer {
+    display: block;
+}
+
+.footer-cell {
+    width: 23%;
+    padding: 0 40px 0 0;
+    vertical-align: top;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-cell.full-width {
+    margin-top: 18px;
+    padding: 0 40px 0 0;
+    width: 42%;
+}
+
+.footer-cell.full-width {
+    width: 100%;
+    margin: 30px 0 0;
+    padding: 0;
+}
+
+.footer-nav-lang {
+    width: auto;
+}
+
+.footer-nav-lang {
+    margin-top: 18px;
+}
+
+.nav .ul {
+    list-style: none;
+}
+
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+
+//投稿ボタン
+.sell-btn {
+    bottom: 32px;
+    right: 32px;
+    width: 160px;
+    height: 160px;
+    font-size: 22px;
+}
+
+.sell-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 14px;
+    z-index: 1000;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+}
+
+.sell-btn div {
+    margin: 32px 0 0;
 }
